@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="PyChromaKey",
-    version="0.0.1",
+    version="0.0.3",
     author="Erik McLaughlin",
     author_email="erik@erikcmclaughlin.com",
     description="Chroma key (green screen) library for Python 3",

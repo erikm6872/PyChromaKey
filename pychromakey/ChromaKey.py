@@ -43,3 +43,4 @@ class ChromaKey:
         background = self.__process_background_image(background_image, foreground.mask)
 
         return np.array(foreground.image + background)
+
