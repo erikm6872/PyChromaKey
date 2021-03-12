@@ -33,8 +33,11 @@ class ChromaKey:
         crop_background[mask == 0] = [0, 0, 0]
         return crop_background
 
-    def chroma_key_image(self, frame, background_image, lower_green=([0, 100, 0]), upper_green=([80, 255, 40])):
+    def chroma_key_image(self, frame, background_image, lower_green=None, upper_green=None):
         """Chroma key image method."""
+        lower_green = lower_green if lower_green is not None else ([0, 100, 0])
+        upper_green = upper_green if upper_green is not None else ([80, 255, 40])
+
         if frame is None or background_image is None:
             raise RuntimeError("Foreground or background image is null.")
 
